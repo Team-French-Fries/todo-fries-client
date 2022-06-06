@@ -69,12 +69,12 @@ Presentation:
 - Express
 - Mongoose
 ## Project Management Schedule
-Monday - Nick
-Tuesday - Devin
-Wednesday - Victor
-Thursday - Trey
+- Monday: Nick
+- Tuesday: Devin
+- Wednesday: Victor
+- Thursday: Trey
 ## Goals for each day
-Monday - Wireframing, Project Development, Get Project Approved
-Tuesday - Backend Development, testing routes in Postman, deploy Backend by end of day
-Wednesday - Frontend Development, creating components/structure, making API calls to backend, deploy by end of day
-Thursday - CSS, styling, post-MVP, project presentation review
+- Monday: Wireframing, Project Development, Get Project Approved
+- Tuesday: Backend Development, testing routes in Postman, deploy Backend by end of day
+- Wednesday: Frontend Development, creating components/structure, making API calls to backend, deploy by end of day
+- Thursday: CSS, styling, post-MVP, project presentation review
