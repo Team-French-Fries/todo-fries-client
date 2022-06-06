@@ -3,11 +3,11 @@ Time of Day Themed Todo List App
 ## Description
 Our todo list app will be a todo list app that can be categorized for different times of the day. Normally, traditional todo list apps are from a day's view in its entirety. With our app, you will be able to have a todo list you can generate, add, modify and delete tasks for the morning, during the day, and the evening.
 ### Project Links
-- (Frontend Github Repository)[https://github.com/Team-French-Fries/todo-fries-client]
-- (Backend Github Repository)[https://github.com/Team-French-Fries/todo-fries-api]
+- [Frontend Github Repository](https://github.com/Team-French-Fries/todo-fries-client)
+- [Backend Github Repository](https://github.com/Team-French-Fries/todo-fries-api)
 ### Wireframes and Architecture
-- (React Wireframe and Schema Models)[https://wireframe.cc/ukyPzy]
-- (React Architecture)[https://wireframe.cc/lbP3m1]
+- [React Wireframe and Schema Models](https://wireframe.cc/ukyPzy)
+- [React Architecture](https://wireframe.cc/lbP3m1)
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
