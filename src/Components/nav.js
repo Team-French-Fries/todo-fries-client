@@ -9,15 +9,12 @@ function Nav() {
                 <Link to="/"><span className="Overview">Overview</span></Link>
                 <Link to="/display">
                     <span className="Morning">Morning</span>
-
                 </Link>
                 <Link to="/display">
                     <span className="Afternoon">Afternoon</span>
-
                 </Link>
                 <Link to="/display">
                     <span className="Afternoon">Evening</span>
-
                 </Link>
             </nav>
             <main>
