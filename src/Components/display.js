@@ -10,8 +10,6 @@ const display = function() {
 const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
 
 
-
-    
 return (
     <div>
         <form onSubmit={null}>
