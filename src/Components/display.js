@@ -7,9 +7,6 @@ import apiUrl from "../ApiUrl"
 const Display = function() {
 const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
 
-
-
-    
 return (
     <div>
         <form onSubmit={null}>
@@ -22,4 +19,5 @@ return (
 
 export default Display;
 //{/* <Route path="" element={<Controls />} /> */}
+
 
