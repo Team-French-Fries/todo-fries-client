@@ -1,20 +1,20 @@
-import Controls from "./Components/Controls";
+// import controls from "./Components/Controls";
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import apiUrl from "../ApiUrl"
 
-//Route for Controls
-<Route path="" element={<Controls />} />
 
-const display = function() {
+const Display = function() {
 const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0670705085600d6078634fa1924f58f796ddd959
 return (
     <div>
         <form onSubmit={null}>
-            <input type="text" onChange={null} />
-            <input type="text" onChange={null} />
+            
             <input/>
         </form>
     </div>
@@ -23,3 +23,8 @@ return (
 
 export default Display;
 //{/* <Route path="" element={<Controls />} /> */}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0670705085600d6078634fa1924f58f796ddd959
