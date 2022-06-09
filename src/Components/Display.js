@@ -16,7 +16,7 @@ useEffect(() => {
         .then(data => setInterval(data.times))
         .catch(() => console.log("broken"))
 }, [])
-
+console.log(interval)
 const fries = () => {
     setDisplayTask(true)
 }
@@ -26,6 +26,7 @@ const toggleDisplay = () => {
 
 
 const mappedDisplay = interval.map((item, index) => {
+    console.log(item._id)
 const tasks = item.tasks
 let taskDisplay = ""
 if (displayTask !== false) {

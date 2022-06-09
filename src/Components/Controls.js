@@ -1,22 +1,27 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router'
 import apiUrl from '../apiUrl'
 
 export default function Controls() {
 
-const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
-const [taskList, setTaskList] = useState([])
+const [newTaskName, setNewTaskName] = useState("")
+const [newTaskDetails, setNewTaskDetails] = useState("")
 
+const [updatedTask, setUpdatedTask] = useState()
 
-const handleChange = (event) => {
-    setTodo({...taskList, [event.target.name]: event.target.value})
+const handleName = (event) => {
+    setNewTaskName(event.target.value)
+}
+const handleDetails = (event) => {
+    setNewTaskDetails(event.target.value)
 }
 
 const handleSubmit = (event) => {
     event.preventDefault()
     let object = {
-        taskName: "",
-        taskDetails: ""
+        taskName: newTaskName,
+        taskDetails: newTaskDetails
     }
     fetch(apiUrl + `/todos`, {
         method: 'POST',
@@ -26,22 +31,33 @@ const handleSubmit = (event) => {
         },
         body: JSON.stringify(object)
     })
-    .then(response => response.json({
-        taskName: "fries",
-        taskDetails: "Extra Salt"
-    }))
+    .then(response => response.json())
     .then(data => {
         console.log("Success:", data)
+        console.log(data.todo._id)
     })
-    setTaskList({taskName: "", taskDetails: ""})
+    // const handleChange = (event) => {
+    //     set
+    // }
+
+    fetch(apiUrl + `/times`, {
+        method: 'PATCH',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify()
+    })
+    setNewTaskName("")
+    setNewTaskDetails("")
 
 }
 
   return (
     <div>
-        <form onSubmit={handleSubmit}>
-            <input value={todo.taskName} placeholder="Add Task" type="text" onChange={handleChange}/>
-            <input value={todo.taskDetails} placeholder="Add Details" type="text" onChange={handleChange}/>
+        <form onSubmit={handleSubmit} >
+            <input value={newTaskName} placeholder="Add Task" type="text" onChange={handleName}/>
+            <input value={newTaskDetails} placeholder="Add Details" type="text" onChange={handleDetails}/>
             <input type="submit" value="Add a Task" />
         </form>
     </div>
