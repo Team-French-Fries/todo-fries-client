@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import apiUrl from "../apiUrl"
-import Controls from "./Controls"
 
 const Display = function() {
 // const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
@@ -16,7 +15,7 @@ useEffect(() => {
         .then(data => setInterval(data.times))
         .catch(() => console.log("broken"))
 }, [])
-
+// console.log(interval)
 const fries = () => {
     setDisplayTask(true)
 }
@@ -26,6 +25,7 @@ const toggleDisplay = () => {
 
 
 const mappedDisplay = interval.map((item, index) => {
+    // console.log(item._id)
 const tasks = item.tasks
 let taskDisplay = ""
 if (displayTask !== false) {
@@ -36,6 +36,7 @@ if (displayTask !== false) {
 
     return (
         <div key={index}>
+
             <h2 >
                 {item.timeOfDay}
             </h2>
@@ -43,7 +44,6 @@ if (displayTask !== false) {
                 {tasks.map(task => <li type="button" onClick={fries}>{task.taskName}</li>)}
                 {taskDisplay}
             </ul>
-                { < Controls />}
         </div>
     )
 })
