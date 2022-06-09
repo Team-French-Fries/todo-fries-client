@@ -7,25 +7,32 @@ import Controls from "./Controls"
 const Display = function() {
 // const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
 const [interval, setInterval] = useState([])
+const [displayedDetails, setDisplayedDetails] = useState("")
 
 useEffect(() => {
-    fetch(`https://fries-api.herokuapp.com/times`)
+    fetch(apiUrl + `/times`)
         .then(response => response.json())
         .then(data => setInterval(data.times))
         .catch(() => console.log("broken"))
 }, [])
 
+const fries = (event) => {
+    console.log("Fries!")
+    
+}
 
-const mappedDisplay = interval.map((item) => {
+const mappedDisplay = interval.map((item, index) => {
+const tasks = item.tasks
     return (
-        <div>
-            <h2>
+        <div key={index}>
+            <h2 >
                 {item.timeOfDay}
             </h2>
-            <li>
-                {item.tasks}
+            <ul key={index}>
+                {tasks.map(task => <li type="button" onClick={fries}>{task.taskName}</li>)}
+                {tasks.map(task => <li>{task.taskDetails}</li>)}
+            </ul>
                 { < Controls />}
-            </li>
 
         </div>
     )
