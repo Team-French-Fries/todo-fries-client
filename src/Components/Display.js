@@ -7,7 +7,8 @@ import Controls from "./Controls"
 const Display = function() {
 // const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
 const [interval, setInterval] = useState([])
-const [displayedDetails, setDisplayedDetails] = useState("")
+const [displayTask, setDisplayTask] = useState(false)
+// const [taskDisplay, setTaskDisplay] = useState("")
 
 useEffect(() => {
     fetch(apiUrl + `/times`)
@@ -16,24 +17,33 @@ useEffect(() => {
         .catch(() => console.log("broken"))
 }, [])
 
-const fries = (event) => {
-    console.log("Fries!")
-    
+const fries = () => {
+    setDisplayTask(true)
 }
+const toggleDisplay = () => {
+    setDisplayTask(false)
+}
+
 
 const mappedDisplay = interval.map((item, index) => {
 const tasks = item.tasks
+let taskDisplay = ""
+if (displayTask !== false) {
+    taskDisplay = (
+        tasks.map(task => <li onClick={toggleDisplay}>{task.taskDetails}</li>)
+    )
+}
+
     return (
         <div key={index}>
             <h2 >
                 {item.timeOfDay}
             </h2>
-            <ul key={index}>
+            <ul key={index} >
                 {tasks.map(task => <li type="button" onClick={fries}>{task.taskName}</li>)}
-                {tasks.map(task => <li>{task.taskDetails}</li>)}
+                {taskDisplay}
             </ul>
                 { < Controls />}
-
         </div>
     )
 })
