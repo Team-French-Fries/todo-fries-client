@@ -5,7 +5,7 @@ import apiUrl from '../apiUrl'
 export default function Controls() {
 
 const [todo, setTodo] = useState({taskName: "", taskDetails: ""})
-const [taskList, setTaskList] = useState()
+const [taskList, setTaskList] = useState([])
 
 
 const handleChange = (event) => {
@@ -14,20 +14,27 @@ const handleChange = (event) => {
 
 const handleSubmit = (event) => {
     event.preventDefault()
+    let object = {
+        taskName: "",
+        taskDetails: ""
+    }
     fetch(apiUrl + `/todos`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(todo)
+        body: JSON.stringify(object)
     })
-    .then(response => response.json())
+    .then(response => response.json({
+        taskName: "fries",
+        taskDetails: "Extra Salt"
+    }))
     .then(data => {
-        const copy = [...taskList]
-        copy.push(data.todo)
-        setTaskList({taskName: "", taskDetails: ""})
+        console.log("Success:", data)
     })
+    setTaskList({taskName: "", taskDetails: ""})
+
 }
 
   return (
