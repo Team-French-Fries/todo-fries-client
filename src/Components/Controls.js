@@ -7,6 +7,7 @@ export default function Controls() {
 
 const [newTaskName, setNewTaskName] = useState("")
 const [newTaskDetails, setNewTaskDetails] = useState("")
+const [interval, setInterval] = useState("Morning")
 
 const [updatedTask, setUpdatedTask] = useState()
 
@@ -35,18 +36,51 @@ const handleSubmit = (event) => {
     .then(data => {
         console.log("Success:", data)
         console.log(data.todo._id)
+        setUpdatedTask(data.todo._id)
     })
     // const handleChange = (event) => {
     //     set
     // }
+    let ApiId
+    const ApiIds = {
+        morning: "62a228ba563b748c039ce415",
+        afternoon: "62a271c183aa4732ce87b522",
+        evening: "629fc9c0e3d9fb6f10ba289b"
+    }
+    let ApiTime
+    const ApiTimes = {
+        morning: "Morning",
+        afternoon: "Afternoon",
+        evening: "Evening"
 
-    fetch(apiUrl + `/times`, {
+    }
+    if (interval === "Morning") {
+        ApiId = ApiIds.morning
+        ApiTime = ApiTimes.morning
+    } else if ( interval === "Afternoon") {
+        ApiId = ApiIds.afternoon
+        ApiTime = ApiTimes.afternoon
+    } else if ( interval === "Evening") {
+        ApiId = ApiIds.evening
+        ApiTime = ApiTimes.evening
+    }
+    let patchobject = {
+        timeOfDay: ApiTime,
+        tasks: [
+        ]
+    }
+
+    fetch(apiUrl + `/times/` + ApiId, {
         method: 'PATCH',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify()
+        body: JSON.stringify(patchobject)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Success Times: ", data)
     })
     setNewTaskName("")
     setNewTaskDetails("")
@@ -58,6 +92,11 @@ const handleSubmit = (event) => {
         <form onSubmit={handleSubmit} >
             <input value={newTaskName} placeholder="Add Task" type="text" onChange={handleName}/>
             <input value={newTaskDetails} placeholder="Add Details" type="text" onChange={handleDetails}/>
+            <select value={interval} onChange={(e) => (setInterval(e.target.value), console.log(e.target.value))}>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+            </select>
             <input type="submit" value="Add a Task" />
         </form>
     </div>
