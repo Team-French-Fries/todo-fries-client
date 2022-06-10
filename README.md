@@ -8,10 +8,6 @@ We decided to create a Todo application that takes a twist on normal Todo applic
 
 Three times of day are the focus - Morning, Afternoon and Evening. We believe this approach can make a more useful Todo app user experience to maintain their focus on completing their tasks throughout the day, instead of seeing 10+ tasks all at once at the very start of the day.
 
-### Technologies used
-
-React, Node.js, MongoDB, Mongoose. The [backend](https://github.com/Team-French-Fries/todo-fries-api) will be deployed on Heroku. The [frontend](https://github.com/Team-French-Fries/todo-fries-client) will be deployed on Github Pages.
-
 ### General approach for creating our application
 
 #### Backend approach
@@ -28,52 +24,15 @@ Two controllers (timeController, todoController) were created to make the CRUD m
 
 Planning our frontend included making a [roadmap](https://wireframe.cc/lbP3m1) of our component structure. Our goal for the frontend React application is mobile focused, with the only change that occurs in our first version goals is our navigation bar defaulting to an 'Overview' page to look at the user's todos based on the time of day at a glance, with clicking a hamburger menu to click on a time of day, which would collapse the other times of the day and expand the chosen time of day from the menu. On larger screen views the times of day to choose from would be shown directly in the navigation bar instead of a hamburger menu.
 
-### `npm run build`
+### Future version goals
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Creating our full stack application from scratch leaves us with more goals we'd like future versions to have beyond what we accomplished in our project timeline. These include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- being able to have a todo created go specifically to the time of day chosen, currently defaults to all times of day
+- when clicking delete for a todo, it updates upon clicking the delete button, currently is only reflected when refreshing the webpage after clicking the delete button
+- build out our Overview page which can give the user a preview at a glance of 1-2 todos of each time of the day, cycling through a few background images depending on the time of day of the user's local time, having useful local information for the user populate like their current weather, time of day and current date
+- when choosing a time of day, it expands only that time of day's tasks, and collapses the other time of day's task lists
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technologies used
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React, Node.js, MongoDB, Mongoose. The [backend](https://github.com/Team-French-Fries/todo-fries-api) will be deployed on Heroku. The [frontend](https://github.com/Team-French-Fries/todo-fries-client) will be deployed on Github Pages.
