@@ -34,6 +34,7 @@ Creating our full stack application from scratch leaves us with more goals we'd 
 - when clicking delete for a todo, it updates upon clicking the delete button, currently is only reflected when refreshing the webpage after clicking the delete button
 - build out our Overview page which can give the user a preview at a glance of 1-2 todos of each time of the day, cycling through a few background images depending on the time of day of the user's local time, having useful local information for the user populate like their current weather, time of day and current date
 - when choosing a time of day, it expands only that time of day's tasks, and collapses the other time of day's task lists
+- spend time on CSS styling and enhancing the UI/UX of our application to match our vision for the application
 
 ### Technologies used
 
