@@ -24,6 +24,8 @@ Two controllers (timeController, todoController) were created to make the CRUD m
 
 Planning our frontend included making a [roadmap](https://wireframe.cc/lbP3m1) of our component structure. Our goal for the frontend React application is mobile focused, with the only change that occurs in our first version goals is our navigation bar defaulting to an 'Overview' page to look at the user's todos based on the time of day at a glance, with clicking a hamburger menu to click on a time of day, which would collapse the other times of the day and expand the chosen time of day from the menu. On larger screen views the times of day to choose from would be shown directly in the navigation bar instead of a hamburger menu.
 
+Our planning included a Nav component to house being able to navigvate to different options - Overview, Morning, Afternoon and Evening. A Controls component houses where we make our API calls to create, update and delete tasks. A Displays component houses how we display and interact with the todos based on the times of the day.
+
 ### Future version goals
 
 Creating our full stack application from scratch leaves us with more goals we'd like future versions to have beyond what we accomplished in our project timeline. These include:
