@@ -8,9 +8,9 @@ export default function Controls() {
 const [newTaskName, setNewTaskName] = useState("")
 const [newTaskDetails, setNewTaskDetails] = useState("")
 const [interval, setInterval] = useState("Morning")
-
 const [updatedTask, setUpdatedTask] = useState()
 
+// functions to capture the text input of a new task name and new task details
 const handleName = (event) => {
     setNewTaskName(event.target.value)
 }
@@ -18,6 +18,9 @@ const handleDetails = (event) => {
     setNewTaskDetails(event.target.value)
 }
 
+// handleSubmit function to add a new user generated task name/task details with POST
+// followed by trying to work through how we can PATCH the times model to accept
+// the new user generated task name/task details for a certain time of the day
 const handleSubmit = (event) => {
     event.preventDefault()
     let object = {
@@ -38,9 +41,6 @@ const handleSubmit = (event) => {
         console.log(data.todo._id)
         setUpdatedTask(data.todo._id)
     })
-    // const handleChange = (event) => {
-    //     set
-    // }
     let ApiId
     const ApiIds = {
         morning: "629fc9c0e3d9fb6f10ba289b",
@@ -69,7 +69,6 @@ const handleSubmit = (event) => {
         tasks: [
         ]
     }
-
     fetch(apiUrl + `/times/` + ApiId, {
         method: 'PATCH',
         headers: {
@@ -84,7 +83,6 @@ const handleSubmit = (event) => {
     })
     setNewTaskName("")
     setNewTaskDetails("")
-
 }
 
   return (
