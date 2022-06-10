@@ -11,23 +11,23 @@ Our todo list app will be a todo list app that can be categorized for different 
 ### Time/Priority Matrix
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Git Management | H | 8hrs | x hrs | x hrs |
-| Review Code for Bugs | H | 8hrs | x hrs | x hrs |
-| Connection | H | 2hrs | x hrs | x hrs |
-| Express  | H | 2hrs | x hrs | x hrs |
-| Routes | H | 4hrs | x hrs | x hrs |
-| Controllers | H | 4hrs | x hrs | x hrs |
-| Schemas / Models | H | 2hrs | x hrs | x hrs |
-| Seed | H | 4hrs | x hrs | x hrs |
-| Creating MongoDB | H | 2hrs | x hrs | x hrs |
-| Connecting to Heroku | H | 2hrs | x hrs | x hrs |
-| Deployment of Backend | H | 2hrs | x hrs | x hrs |
-| Install and set up react router | H | 0.5hrs | x hrs | x hrs |
-| Links, Routes | H | 4hrs | x hrs | x hrs |
-| Logic for Display (Morning/Day/Evening) | H | 4hrs | x hrs | x hrs |
-| Running API Fetches | H | 6hrs | x hrs | x hrs |
-| Deploy to Github Pages | H | 2hrs | x hrs | x hrs |
-| Total | H | 56.5 hrs | x hrs | x hrs |
+| Git Management | H | 8hrs | 12 hrs | 12 hrs |
+| Review Code for Bugs | H | 8hrs | 12 hrs | 12 hrs |
+| Connection | H | 2hrs | 2 hrs | 2 hrs |
+| Express  | H | 2hrs | 2 hrs | 2 hrs |
+| Routes | H | 4hrs | 6 hrs | 6 hrs |
+| Controllers | H | 4hrs | 3 hrs | 3 hrs |
+| Schemas / Models | H | 2hrs | 1 hrs | 1 hrs |
+| Seed | H | 4hrs | x - did not need | x - did not need |
+| Creating MongoDB | H | 2hrs | 2 hrs | 2 hrs |
+| Connecting to Heroku | H | 2hrs | 3 hrs | 3 hrs |
+| Deployment of Backend | H | 2hrs | 3 hrs | 3 hrs |
+| Install and set up react router | H | 0.5hrs | 0.5 hrs | 0.5 hrs |
+| Links, Routes | H | 4hrs | 2 hrs | 2 hrs |
+| Logic for Display (Morning/Day/Evening) | H | 4hrs | 8 hrs | 8 hrs |
+| Running API Fetches | H | 6hrs | 12 hrs | 12 hrs |
+| Deploy to Github Pages | H | 2hrs | x - did not get to | x - did not get to |
+| Total | H | 56.5 hrs | 68.5 hrs | 68.5 hrs |
 ## MVP/Post-MVP
 ### MVP
 - planning directory that sufficiently demonstrates the team's planning process
