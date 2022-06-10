@@ -35,6 +35,8 @@ Creating our full stack application from scratch leaves us with more goals we'd 
 - build out our Overview page which can give the user a preview at a glance of 1-2 todos of each time of the day, cycling through a few background images depending on the time of day of the user's local time, having useful local information for the user populate like their current weather, time of day and current date
 - when choosing a time of day, it expands only that time of day's tasks, and collapses the other time of day's task lists
 - spend time on CSS styling and enhancing the UI/UX of our application to match our vision for the application
+- fresh redeploy to Heroku, encountered issues with our initial deployment, in production we continue to use localhost and data generated locally
+- deploy our front end to Github pages
 
 ### Technologies used
 
