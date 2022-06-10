@@ -9,7 +9,7 @@ const Nav1 = function () {
          
             <Navbar bg="light" varient="light" >
                 <Nav>
-                  
+                    <Nav.Link as={Link} to="/" className="Overview">Overview</Nav.Link>
                     <Nav.Link as={Link} to="/display" className="Morning">Morning</Nav.Link>
                     <Nav.Link as={Link} to="/display" className="Afternoon">Afternoon</Nav.Link>
                     <Nav.Link as={Link} to="/display" className="Evening">Evening</Nav.Link> 
