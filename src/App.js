@@ -5,14 +5,11 @@ import Nav1 from "./Components/Nav";
 import Display from './Components/Display';
 import Controls from "./Components/Controls"
 
-
-
 function App() {
   return (
     <div className="App">
       { <Nav1 />}
       { < Controls />}
-
       { <Display/>}
     </div>
   );

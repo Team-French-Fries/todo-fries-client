@@ -10,5 +10,5 @@ if (window.location.hostname === 'localhost') {
 } else {
   apiUrl = apiUrls.production
 }
-// console.log(window.location.hostname)
+
 export default apiUrl;
