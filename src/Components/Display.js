@@ -21,6 +21,7 @@ useEffect(() => {
         .catch(() => console.log("broken"))
 }, [])
 
+// onClick functions to toggle display of task details under task name
 const fries = () => {
     setDisplayTask(true)
 }
